@@ -1,0 +1,28 @@
+@import '../../../styles';
+
+.filtres-container {
+  height: calc(100% - 30px);
+  width: calc(100% - 30px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 15px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+
+  background-color: white;
+
+  mat-form-field {
+    width: 35%;
+
+    .mat-form-field-wrapper {
+      padding-bottom: 0px;
+    }
+  }
+
+  .apply-button {
+    background-color: $accent;
+    color: white;
+  }
+}

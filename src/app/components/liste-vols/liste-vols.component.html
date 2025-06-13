@@ -1,0 +1,10 @@
+<div class="flight-listing">
+  <div class="catalog-container">
+    @for (vol of vols; track vol.icao) {
+      <app-vol [vol]="vol"></app-vol>
+    }
+    @empty {
+      <div class="empty-catalog">Aucun vol disponible</div>
+    }
+  </div>
+</div>

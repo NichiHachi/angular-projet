@@ -1,0 +1,14 @@
+<div class="traveler-card">
+    @if (afficherPhoto) {
+        <img class="traveler-avatar" [src]="passager.image" [alt]="passager.nom">
+    }
+    <div class="traveler-info" style="display: flex; align-items: center; gap: 15px;">
+        <h3 class="traveler-name" [matTooltip]="passager.email" [matTooltipPosition]="'above'" style="margin: 0;">{{ passager.nom }}</h3>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <span class="traveler-class" appClasseVolColor [classeVol]="passager.classeVol">{{ passager.classeVol }}</span>
+            <span class="luggage-tag" appBagageSouteValidation [classe]="passager.classeVol" [nombreBagages]="passager.nbBagagesSoute">
+                <mat-icon>luggage</mat-icon>x{{ passager.nbBagagesSoute }}
+            </span>
+        </div>
+    </div>
+</div>

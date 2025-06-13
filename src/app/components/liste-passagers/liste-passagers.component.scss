@@ -1,0 +1,42 @@
+.passenger-roster {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.roster-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #37474f;
+}
+
+.display-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.passenger-list {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 40px 0;
+  color: #78909c;
+  font-style: italic;
+}

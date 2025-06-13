@@ -1,0 +1,24 @@
+<div class="flight-box" (click)="selectVol()" [class.flight-selected]="isSelected()">
+    <div class="icon">
+        @if(isAtterrissage) {
+            <mat-icon>flight_land</mat-icon>
+        } @else {
+            <mat-icon>flight_takeoff</mat-icon>
+        }
+    </div>
+    <div class="flight-details">
+        <div class="flight-header">
+            <div><strong>ICAO :</strong> {{ vol?.icao | uppercase }}</div>
+            <div><strong>MATRICULE :</strong> {{ vol?.matricule | uppercase }}</div>
+            <img class="airline-logo" [src]="compagnieLogo" [alt]="vol?.compagnie" width="120" height="120" />
+        </div>
+        
+        <div class="flight-path">
+            <div class="airport-source">{{ vol?.aeroportDepart }}</div>
+            <div class="fleche">
+                <mat-icon>arrow_right_alt</mat-icon>
+            </div>
+            <div class="airport-destination">{{ vol?.aeroportArrivee || 'Inconnu' }}</div>
+        </div>
+    </div>
+</div>

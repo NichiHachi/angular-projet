@@ -1,0 +1,25 @@
+<div class="passenger-roster">
+    <div class="roster-header">
+        <h2 class="header-title">Liste des passagers</h2>
+
+        <div class="display-options">
+            <mat-slide-toggle [(ngModel)]="afficherPhotos" color="primary">
+                Afficher les photos (RGPD)
+            </mat-slide-toggle>
+        </div>
+    </div>
+
+    @if (passagers.length === 0) {
+        <div class="empty-message">
+            Aucun passager à afficher. Veuillez sélectionner un vol.
+        </div>
+    }
+
+    @if (passagers.length > 0) {
+        <div class="passenger-list">
+            @for (passager of passagers; track passager) {
+                <app-passager [passager]="passager" [afficherPhoto]="afficherPhotos"></app-passager>
+            }
+        </div>
+    }
+</div>

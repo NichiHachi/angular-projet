@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="title"><h1>{{ isDecollage ? 'DECOLLAGES' : 'ATTERRISSAGES' }}</h1></div>
+  <div class="sections">
+    <div class="left">
+      <div class="top">
+        <app-filtres></app-filtres>
+      </div>
+      <div class="bottom">
+        <app-liste-vols></app-liste-vols>
+      </div>
+    </div>
+    <div class="right">
+      <app-liste-passagers></app-liste-passagers>
+    </div>
+  </div>
+</div>

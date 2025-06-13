@@ -1,0 +1,59 @@
+.flight-box {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  margin-bottom: 12px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.flight-selected {
+  border-left: 4px solid #1976d2;
+  background-color: #e3f2fd;
+}
+
+.flight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.flight-details {
+  padding: 8px 0;
+}
+
+.flight-id {
+  font-weight: 600;
+  color: #455a64;
+}
+
+.airline-logo {
+  max-height: 40px;
+  object-fit: contain;
+}
+
+.airport-source {
+  font-weight: 500;
+  color: #2e7d32;
+}
+
+.airport-destination {
+  font-weight: 500;
+  color: #c62828;
+}
+
+.flight-path {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+

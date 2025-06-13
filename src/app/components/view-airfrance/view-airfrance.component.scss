@@ -1,0 +1,70 @@
+@import '../../../styles';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f7f9fc;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  .title {
+    height: 8%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: $primary;
+    color: $white;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    h1 {
+      margin: 0;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+  }
+
+  .sections {
+    display: flex;
+    justify-content: space-between;
+    height: 92%;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+
+    .left {
+      width: 49%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .top {
+        width: 100%;
+        height: 20%;
+        overflow: hidden;
+        border-radius: 8px;
+        background-color: $white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }      .bottom {
+        width: 100%;
+        height: 78%;
+        overflow-y: auto;
+        border-radius: 8px;
+        background-color: $white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    }    .right {
+      width: 49%;
+      height: 100%;
+      overflow-y: auto;
+      border-radius: 8px;
+      background-color: $white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

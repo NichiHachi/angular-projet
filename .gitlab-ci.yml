@@ -1,0 +1,18 @@
+# The Docker image that will be used to build your app
+image: node:lts
+
+pages:
+  cache:
+    paths:
+    - node_modules/
+
+  stage: deploy
+  script:
+  - npm install -g @angular/cli@latest
+  - npm install
+  - ng build
+  - mkdir -p public
+  - mv dist/angular-polytech-td5/browser/* public/
+  artifacts:
+    paths:
+    - public
